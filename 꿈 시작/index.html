@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* 상단 정렬 */
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px; /* 맥북 및 큰 화면에서도 크기 제한 */
+      width: 100%; /* 기본 화면 크기에 맞춤 */
+      padding: 0 20px; /* 양쪽 여백 */
+    }
+
+    img {
+      width: 100%; /* 기본: 전체 폭 */
+      object-fit: contain; /* 이미지 왜곡 방지 */
+    }
+
+    img:hover {
+      transform: scale(1.1); /* 호버 시 크기 증가 */
+      transition: 0.1s ease-in;
+    }
+
+    img:active {
+      transform: scale(0.9); /* 클릭 시 크기 감소 */
+      filter: brightness(0.7); /* 클릭 시 어둡게 효과 추가 */
+
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0 0 20px;
+    }
+
+@keyframes fadeIn {
+            0% {
+                opacity: 0; /* 처음에는 투명 */
+            }
+            100% {
+                opacity: 1; /* 마지막에는 불투명 */
+            }
+        }
+
+    #letterspace{animation: fadeIn 3s ease-in-out;}
+
+    @media (min-width: 1024px) { /* 맥북 이상 */
+      .container {
+        position: absolute;
+        width: 40%; /* 화면 폭의 50% */
+        top: 25vh;
+      }
+
+      h1 {
+        font-size: 4rem;
+        position: absolute;
+
+        top: 10vh;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      #letterspace{position: absolute; bottom: 20vh;}
+
+
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+      <h1>꿈만 같은 세상</h1>
+  <div class="container" >
+    <img src="./img/1.png" id="cookie" alt="Responsive Image">
+
+    <p>오늘의 포춘 쿠키를 확인해 보세요.</p>
+  </div>
+  <div id="letterspace"></div>
+  <script type="text/javascript">
+
+    let letter = document.createElement("img");
+    letter.src = "./img/2.png";
+
+
+
+
+
+    cookie.onclick = function(){
+
+      letterspace.appendChild(letter);
+    }
+  </script>
+</body>
+
+</html>
